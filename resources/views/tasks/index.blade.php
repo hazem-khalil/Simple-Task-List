@@ -3,6 +3,9 @@
 @section ('content')
 	<div class="panel panel-default">
 		<div class="panel-body">
+
+			@include ('tasks.errors')
+
 			<form action="/tasks" method="POST">
 				@csrf
 				<div class="form-group">
@@ -19,4 +22,6 @@
 			</form>
 		</div>
 	</div>
+	@include ('tasks.show')
+
 @endsection
