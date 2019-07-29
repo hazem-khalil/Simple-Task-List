@@ -20,6 +20,7 @@ Route::post('/tasks', function () {
 	return redirect()->home();
 });
 
-Route::delete('/tasks/{task}', function () {
-	// 
+Route::delete('/tasks/{task}', function (Task $task) {
+	$task->delete();
+	return redirect()->home();
 });

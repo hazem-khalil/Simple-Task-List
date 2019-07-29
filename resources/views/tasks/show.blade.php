@@ -13,6 +13,13 @@
 					@foreach ($tasks  as $task)
 						<tr>
 							<td>{{ $task->name }}</td>
+							<td>
+								<form action="/tasks/{{ $task->id }}" method="Post">
+									@csrf
+									{{ method_field('DELETE') }}
+									<button class="btn btn-danger">Delete</button>
+								</form>
+							</td>
 						</tr>
 					@endforeach
 				</tbody>
